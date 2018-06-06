@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +14,72 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FGMultiSelectionPickerView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BC1-hM-YB3">
+                                <rect key="frame" x="69" y="263" width="237" height="38"/>
+                                <color key="backgroundColor" red="0.83137254900000002" green="0.68627450980000004" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="T1g-EB-SHN"/>
+                                    <constraint firstAttribute="width" secondItem="BC1-hM-YB3" secondAttribute="height" multiplier="79:36" constant="153.61111111111109" id="xr5-s8-elh"/>
+                                </constraints>
+                                <state key="normal" title="Open Picker"/>
+                                <connections>
+                                    <action selector="openPicker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KZU-TB-c4X"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mZF-Z2-lmb" customClass="FGMultiSelectionPickerView" customModule="FGMultiSelectionPickerView" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="517" width="375" height="150"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="v21-Q9-qJl"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I'VE SELECTED..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l4w-ct-cIf">
+                                <rect key="frame" x="69" y="30" width="237" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="rqx-jl-YAK"/>
+                                    <constraint firstAttribute="width" secondItem="l4w-ct-cIf" secondAttribute="height" multiplier="79:7" id="wTm-Te-ydu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rrt-YC-jfv">
+                                <rect key="frame" x="69" y="67" width="237" height="180"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="mZF-Z2-lmb" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="2af-Is-0ng"/>
+                            <constraint firstItem="rrt-YC-jfv" firstAttribute="leading" secondItem="l4w-ct-cIf" secondAttribute="leading" id="6Kb-7j-cNq"/>
+                            <constraint firstItem="BC1-hM-YB3" firstAttribute="top" secondItem="rrt-YC-jfv" secondAttribute="bottom" constant="16" id="Fq8-qU-ckY"/>
+                            <constraint firstItem="BC1-hM-YB3" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-61.5" id="H73-Hs-FQi"/>
+                            <constraint firstItem="l4w-ct-cIf" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="K4r-ms-kQ5"/>
+                            <constraint firstItem="rrt-YC-jfv" firstAttribute="top" secondItem="l4w-ct-cIf" secondAttribute="bottom" constant="16" id="OZU-rW-NV6"/>
+                            <constraint firstItem="mZF-Z2-lmb" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="a2t-0s-qLO"/>
+                            <constraint firstItem="l4w-ct-cIf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="lPf-rB-mfD"/>
+                            <constraint firstItem="BC1-hM-YB3" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="qbG-mB-AdS"/>
+                            <constraint firstItem="rrt-YC-jfv" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="rvZ-ru-geN"/>
+                            <constraint firstItem="mZF-Z2-lmb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sYN-dw-r9b"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="openButton" destination="BC1-hM-YB3" id="iYk-LX-Hhm"/>
+                        <outlet property="optionSelectedTextView" destination="rrt-YC-jfv" id="0BE-ki-O6r"/>
+                        <outlet property="picker" destination="mZF-Z2-lmb" id="kUR-uk-3A3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>

@@ -7,14 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE2B2DC120C8083500CDFC9E /* FGCheckboxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2B2DC020C8083500CDFC9E /* FGCheckboxButton.swift */; };
+		EE2B2DC320C8237600CDFC9E /* CheckBoxCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE2B2DC220C8237600CDFC9E /* CheckBoxCell.xib */; };
+		EE2B2DC620C8457000CDFC9E /* gif_example.gif in Resources */ = {isa = PBXBuildFile; fileRef = EE2B2DC520C8456F00CDFC9E /* gif_example.gif */; };
 		EECD082C20C6D2DA00BBC4A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECD082B20C6D2DA00BBC4A0 /* AppDelegate.swift */; };
 		EECD082E20C6D2DA00BBC4A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECD082D20C6D2DA00BBC4A0 /* ViewController.swift */; };
 		EECD083120C6D2DA00BBC4A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EECD082F20C6D2DA00BBC4A0 /* Main.storyboard */; };
 		EECD083320C6D2E100BBC4A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EECD083220C6D2E100BBC4A0 /* Assets.xcassets */; };
 		EECD083620C6D2E100BBC4A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EECD083420C6D2E100BBC4A0 /* LaunchScreen.storyboard */; };
+		EECD084F20C6F88600BBC4A0 /* FGMultiSelectionPickerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECD084E20C6F88600BBC4A0 /* FGMultiSelectionPickerConstants.swift */; };
+		EECD085120C6FA3100BBC4A0 /* FGMultiSelectionPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECD085020C6FA3100BBC4A0 /* FGMultiSelectionPickerView.swift */; };
+		EECD085320C702BB00BBC4A0 /* FGMultiSelectionPickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECD085220C702BB00BBC4A0 /* FGMultiSelectionPickerTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EE2B2DC020C8083500CDFC9E /* FGCheckboxButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FGCheckboxButton.swift; sourceTree = "<group>"; };
+		EE2B2DC220C8237600CDFC9E /* CheckBoxCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckBoxCell.xib; sourceTree = "<group>"; };
+		EE2B2DC520C8456F00CDFC9E /* gif_example.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = gif_example.gif; sourceTree = SOURCE_ROOT; };
 		EECD082820C6D2DA00BBC4A0 /* FGMultiSelectionPickerView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FGMultiSelectionPickerView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EECD082B20C6D2DA00BBC4A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EECD082D20C6D2DA00BBC4A0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +31,9 @@
 		EECD083220C6D2E100BBC4A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EECD083520C6D2E100BBC4A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EECD083720C6D2E100BBC4A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EECD084E20C6F88600BBC4A0 /* FGMultiSelectionPickerConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FGMultiSelectionPickerConstants.swift; sourceTree = "<group>"; };
+		EECD085020C6FA3100BBC4A0 /* FGMultiSelectionPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FGMultiSelectionPickerView.swift; sourceTree = "<group>"; };
+		EECD085220C702BB00BBC4A0 /* FGMultiSelectionPickerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FGMultiSelectionPickerTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EE2B2DC420C8432500CDFC9E /* Gif */ = {
+			isa = PBXGroup;
+			children = (
+				EE2B2DC520C8456F00CDFC9E /* gif_example.gif */,
+			);
+			path = Gif;
+			sourceTree = "<group>";
+		};
 		EECD081F20C6D2DA00BBC4A0 = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +74,8 @@
 		EECD082A20C6D2DA00BBC4A0 /* FGMultiSelectionPickerView */ = {
 			isa = PBXGroup;
 			children = (
+				EE2B2DC420C8432500CDFC9E /* Gif */,
+				EECD083D20C6D33300BBC4A0 /* Library */,
 				EECD082B20C6D2DA00BBC4A0 /* AppDelegate.swift */,
 				EECD082D20C6D2DA00BBC4A0 /* ViewController.swift */,
 				EECD082F20C6D2DA00BBC4A0 /* Main.storyboard */,
@@ -62,6 +84,18 @@
 				EECD083720C6D2E100BBC4A0 /* Info.plist */,
 			);
 			path = FGMultiSelectionPickerView;
+			sourceTree = "<group>";
+		};
+		EECD083D20C6D33300BBC4A0 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				EECD084E20C6F88600BBC4A0 /* FGMultiSelectionPickerConstants.swift */,
+				EECD085220C702BB00BBC4A0 /* FGMultiSelectionPickerTableViewCell.swift */,
+				EECD085020C6FA3100BBC4A0 /* FGMultiSelectionPickerView.swift */,
+				EE2B2DC020C8083500CDFC9E /* FGCheckboxButton.swift */,
+				EE2B2DC220C8237600CDFC9E /* CheckBoxCell.xib */,
+			);
+			path = Library;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,8 +156,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE2B2DC320C8237600CDFC9E /* CheckBoxCell.xib in Resources */,
 				EECD083620C6D2E100BBC4A0 /* LaunchScreen.storyboard in Resources */,
 				EECD083320C6D2E100BBC4A0 /* Assets.xcassets in Resources */,
+				EE2B2DC620C8457000CDFC9E /* gif_example.gif in Resources */,
 				EECD083120C6D2DA00BBC4A0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,6 +173,10 @@
 			files = (
 				EECD082E20C6D2DA00BBC4A0 /* ViewController.swift in Sources */,
 				EECD082C20C6D2DA00BBC4A0 /* AppDelegate.swift in Sources */,
+				EECD085120C6FA3100BBC4A0 /* FGMultiSelectionPickerView.swift in Sources */,
+				EE2B2DC120C8083500CDFC9E /* FGCheckboxButton.swift in Sources */,
+				EECD084F20C6F88600BBC4A0 /* FGMultiSelectionPickerConstants.swift in Sources */,
+				EECD085320C702BB00BBC4A0 /* FGMultiSelectionPickerTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +321,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = TA82UEXLK6;
 				INFOPLIST_FILE = FGMultiSelectionPickerView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -289,6 +330,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.filippogiove.FGMultiSelectionPickerView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -299,6 +342,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = TA82UEXLK6;
 				INFOPLIST_FILE = FGMultiSelectionPickerView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -307,6 +351,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.filippogiove.FGMultiSelectionPickerView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

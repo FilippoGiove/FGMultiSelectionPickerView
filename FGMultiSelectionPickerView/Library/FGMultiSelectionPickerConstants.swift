@@ -1,0 +1,35 @@
+//
+//  FGMultiSelectionPickerConstants.swift
+//  FGMultiSelectionPickerView
+//
+//  Created by Filippo Giove on 05/06/2018.
+//  Copyright © 2018 Filippo Giove. All rights reserved.
+//
+
+import Foundation
+import UIKit
+
+
+let FGMULTISELECTIONPICKER_BACKGROUND_COLOR :UIColor = UIColor.init(red: 100/255, green: 100/255, blue: 100/255, alpha: 100/255)
+
+
+let FGMULTISELECTIONPICKER_CORNER_RADIUS :CGFloat = 20
+let FGMULTISELECTIONPICKER_OVERLAY_COLOR :UIColor = UIColor.white.withAlphaComponent(0.6)
+let FGMULTISELECTIONPICKER_CELL_SELECTED_COLOR :UIColor = UIColor.init(red: 100/255, green: 100/255, blue: 100/255, alpha: 1)
+let FGMULTISELECTIONPICKER_TEXT_SELECTED_COLOR :UIColor = UIColor.init(red: 200/255, green: 200/255, blue: 200/255, alpha: 1)
+let FGMULTISELECTIONPICKER_CELL_NOT_SELECTED_COLOR :UIColor = UIColor.init(red: 200/255, green: 200/255, blue: 200/255, alpha: 1)
+let FGMULTISELECTIONPICKER_TEXT_NOT_SELECTED_COLOR :UIColor = UIColor.init(red: 100/255, green: 100/255, blue: 100/255,alpha: 1)
+let FGMULTISELECTIONPICKER_BORDER_COLOR :UIColor = UIColor.lightGray
+let FGMULTISELECTIONPICKER_CHECKBOX_SELECTED_COLOR = UIColor(red: 0/255, green: 118/255, blue: 255/255, alpha: 1.0)
+
+let FGMULTISELECTIONPICKER_BORDER_WIDTH :CGFloat = 0.5
+
+
+let FGMULTISELECTIONPICKER_HEIGHT :CGFloat = 150
+let FGMULTISELECTIONPICKER_WIDTH :CGFloat = 400
+let FGMULTISELECTIONPICKER_ROW_HEIGHT :CGFloat = 44
+let FGMULTISELECTIONPICKER_CELL_IDENTIFIER :NSString = "FGMULTISELECTIONPICKER_CELL_IDENTIFIER"
+
+
+
+
