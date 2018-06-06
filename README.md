@@ -4,15 +4,9 @@ A multi-selection PickerView (iOS)
 ![Gif](https://github.com/FilippoGiove/FGMultiSelectionPickerView/blob/master/gif_example.gif)
 
 
-
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-
 ### Installing
 
-Just copy all the swift classes in the Library Group in your project.
+Just copy in your project all the swift classes in the Library Group .
 
 ## Example
 
