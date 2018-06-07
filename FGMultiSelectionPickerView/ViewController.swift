@@ -58,8 +58,7 @@ class ViewController: UIViewController,FGMultiSelectionPickerViewDelegate {
     }
     
     
-    //mark: FGMultiSelectionPickerViewDelegate
-    
+    //MARK: FGMultiSelectionPickerViewDelegate
     func numberOfRowsForPickerView(pickerView: FGMultiSelectionPickerView) -> NSInteger {
         return entries.count
     }
