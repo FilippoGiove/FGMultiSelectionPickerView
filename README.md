@@ -11,9 +11,18 @@ Just copy in your project all the swift classes in the Library Group .
 ## Example
 
 ```
+//
+//  ViewController.swift
+//  FGMultiSelectionPickerView
+//
+//  Created by Filippo Giove on 05/06/2018.
+//  Copyright © 2018 Filippo Giove. All rights reserved.
+//
+
+import UIKit
+
 class ViewController: UIViewController,FGMultiSelectionPickerViewDelegate {
     
-
     @IBOutlet var openButton: UIButton!
     @IBOutlet var optionSelectedTextView: UITextView!
     @IBOutlet var picker: FGMultiSelectionPickerView!
@@ -58,7 +67,6 @@ class ViewController: UIViewController,FGMultiSelectionPickerViewDelegate {
         
     }
     
-    
     //mark: FGMultiSelectionPickerViewDelegate
     
     func numberOfRowsForPickerView(pickerView: FGMultiSelectionPickerView) -> NSInteger {
@@ -90,27 +98,36 @@ class ViewController: UIViewController,FGMultiSelectionPickerViewDelegate {
 
     }
     
-    
-    //mark: example of how to extract all selected contents
-    func updateTextViewContent(){
-        var text = ""
+    func getActualOptionSelections(pickerView: FGMultiSelectionPickerView) -> NSArray {
+        let selections = NSMutableArray()
         for row in 0..<entries.count{
             let isSelected = self.pickerView(pickerView: self.picker, selectionStateForRow: row)
             if(isSelected){
                 let row_selected_text = self.pickerView(pickerView: self.picker, textForRow: row)
-                if(text == ""){
-                    text = "\(row_selected_text)"
-                }
-                else{
-                    text = "\(text);\(row_selected_text)"
-                }
+                selections.add(row_selected_text)
+            }
+        }
+        return selections
+    }
+        
+    //mark: other for test
+    func updateTextViewContent(){
+        var text:String = ""
+        let selections = self.getActualOptionSelections(pickerView: self.picker)
+        for selection in selections{
+            if(text == ""){
+                text = "\(selection)"
+            }
+            else{
+                text = "\(text);\(selection)"
             }
         }
         self.optionSelectedTextView.text = text;
     }
-   
-    
+
 }
+
+
 ```
 
 ## Authors
