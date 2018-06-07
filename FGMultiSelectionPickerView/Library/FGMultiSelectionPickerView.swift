@@ -64,7 +64,7 @@ class FGMultiSelectionPickerView: UIView, UITableViewDataSource, UITableViewDele
         self.internalTableView.separatorStyle = UITableViewCellSeparatorStyle.none;
         self.internalTableView.showsVerticalScrollIndicator = false;
         self.internalTableView.scrollsToTop = false;
-        self.internalTableView.register(UINib(nibName: "CheckBoxCell", bundle: nil), forCellReuseIdentifier: FGMULTISELECTIONPICKER_CELL_IDENTIFIER as String)
+        self.internalTableView.register(UINib(nibName: "FGCheckBoxCell", bundle: nil), forCellReuseIdentifier: FGMULTISELECTIONPICKER_CELL_IDENTIFIER as String)
         self.addSubview(self.internalTableView)
        
     }
