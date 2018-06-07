@@ -10,12 +10,14 @@ import UIKit
 
 class ViewController: UIViewController,FGMultiSelectionPickerViewDelegate {
     
+    
+    
 
     @IBOutlet var openButton: UIButton!
     @IBOutlet var optionSelectedTextView: UITextView!
     @IBOutlet var picker: FGMultiSelectionPickerView!
     
-    var  entries :NSMutableArray!
+    var entries :NSMutableArray!
     var selectionState:NSMutableDictionary!
     var isPickerHidden:Bool!
     
@@ -87,20 +89,31 @@ class ViewController: UIViewController,FGMultiSelectionPickerViewDelegate {
 
     }
     
-    
-    //mark: other for test
-    func updateTextViewContent(){
-        var text = ""
+    func getActualOptionSelections(pickerView: FGMultiSelectionPickerView) -> NSArray {
+        let selections = NSMutableArray()
         for row in 0..<entries.count{
             let isSelected = self.pickerView(pickerView: self.picker, selectionStateForRow: row)
             if(isSelected){
                 let row_selected_text = self.pickerView(pickerView: self.picker, textForRow: row)
-                if(text == ""){
-                    text = "\(row_selected_text)"
-                }
-                else{
-                    text = "\(text);\(row_selected_text)"
-                }
+                selections.add(row_selected_text)
+            }
+        }
+        return selections
+    }
+    
+    
+    
+    
+    //mark: other for test
+    func updateTextViewContent(){
+        var text:String = ""
+        let selections = self.getActualOptionSelections(pickerView: self.picker)
+        for selection in selections{
+            if(text == ""){
+                text = "\(selection)"
+            }
+            else{
+                text = "\(text);\(selection)"
             }
         }
         self.optionSelectedTextView.text = text;

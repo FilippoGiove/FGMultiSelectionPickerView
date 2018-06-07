@@ -24,6 +24,9 @@ protocol FGMultiSelectionPickerViewDelegate{
     func pickerView(pickerView:FGMultiSelectionPickerView, didCheckRow row:NSInteger);
     // Inform the delegate that a row got deselected, if row = -1 all rows are deselected
     func pickerView(pickerView:FGMultiSelectionPickerView, didUncheckRow row:NSInteger);
+    func getActualOptionSelections(pickerView:FGMultiSelectionPickerView)->NSArray;
+
+    
 
 }
 class FGMultiSelectionPickerView: UIView, UITableViewDataSource, UITableViewDelegate, FGMultiSelectionPickerViewCellDelegate {
